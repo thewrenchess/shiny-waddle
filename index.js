@@ -62,7 +62,7 @@ papa.parse(file, {
                         return
                     }
 
-                    const picklist = result.data.pickLists.find(el => el.orderSourceId == orderId)
+                    let picklist = result.data.pickLists.find(el => el.orderSourceId == orderId || el.oracleOrderId == orderId)
                     if (!picklist) {
                         console.log(`no order ${orderId} found at source location ${sourceId}`)
                         return
