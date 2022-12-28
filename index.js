@@ -86,7 +86,7 @@ papa.parse(file, {
     }
 })
 
-async function getList(sourceId, orderId) {
+function getList(sourceId, orderId) {
     return axiosInstance.get('/pickLists', {
         params: {
             locationId: sourceId,
@@ -95,7 +95,7 @@ async function getList(sourceId, orderId) {
     })
 }
 
-async function patchList(sourceId, picklistId) {
+function patchList(sourceId, picklistId) {
     return axiosInstance.patch(
         `/pickLists/${picklistId}`,
         {
